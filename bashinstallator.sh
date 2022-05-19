@@ -7,7 +7,7 @@ sudo apt update && sudo apt upgrade
 yes | sudo apt install gdebi-core wget
 
 wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-sudo gdebi ~/discord.deb
+yes | sudo gdebi ~/discord.deb
 
 # spotify and telegram install
 
