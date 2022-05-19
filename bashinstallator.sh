@@ -45,11 +45,7 @@ yes | sudo snap install pycharm-professional --classic
 
 yes | sudo apt install vim
 
-# install obsproject
 
-sudo add-apt-repository ppa:obsproject/obs-studio
-
-yes | sudo apt install obs-studi
 
 # other stuff
 
@@ -59,11 +55,35 @@ yes | sudo apt install libreoffice
 
 yes | sudo apt install okular
 
+yes | sudo apt install python3-pip
 
 # install steam
 
-sudo dpkg --add-architecture i386
+#sudo dpkg --add-architecture i386
+#sudo apt update
+#yes | sudo apt install wget gdebi-core libgl1-mesa-glx:i386
+#wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb
+#sudo gdebi ~/steam.deb
+
+# install google chrome
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+# install brave
+
+yes | sudo apt install apt-transport-https curl
+
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
 sudo apt update
-yes | sudo apt install wget gdebi-core libgl1-mesa-glx:i386
-wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb
-sudo gdebi ~/steam.deb
+
+yes | sudo apt install brave-browser
+
+# install obsproject
+
+sudo add-apt-repository ppa:obsproject/obs-studio
+
+yes | sudo apt install obs-studio
