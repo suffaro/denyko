@@ -52,3 +52,7 @@ yes | sudo apt install hardinfo
 
 yes | sudo apt install git
 
+# node.js
+
+sudo apt install nodejs
+
